@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style>
+body {
+  background: rgb(194, 190, 190);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,7 +41,10 @@ export default {
 }
 .container {
   float: left;
-  margin-left: 420px
+  margin-left: 420px;
+  border: 1px solid black;
+  background: white;
+  width: 800px;
 }
 .container li {
   float: left;
@@ -57,6 +63,7 @@ export default {
 }
 .container ul {
   margin-left: 80px;
+  margin-right: 80px;
 }
 .container p {
   float: left;

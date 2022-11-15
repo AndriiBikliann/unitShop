@@ -1,6 +1,9 @@
 <template>
-    <div>
-       Contact us
+    <div class="container-contact">
+       <p>
+         For contact us tel.93937-01 <br>
+         work mail:contact@gmail.com
+       </p>
     </div>
 </template>
 
@@ -11,5 +14,11 @@
 </script>
 
 <style scoped>
-
+.container-contact {
+    float: left;
+    border-top: 1px solid black;
+    text-transform: lowercase;
+    height: 500px;
+    width: 800px;
+ }
 </style>
