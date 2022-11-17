@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-        <p> Logo </p>
+        <p class="logo"> Logo </p>
         <ul>
           <router-link to ="/">  <li> Home </li>  </router-link>
           <router-link to ="/about"> <li> About </li> </router-link>
@@ -65,7 +65,7 @@ body {
   margin-left: 80px;
   margin-right: 80px;
 }
-.container p {
+.logo {
   float: left;
   color: rgb(105, 101, 101);
   text-transform: uppercase;

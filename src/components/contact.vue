@@ -2,7 +2,8 @@
     <div class="container-contact">
        <p>
          For contact us tel.93937-01 <br>
-         work mail:contact@gmail.com
+         work mail:contact@gmail.com <br>
+         our address:27MainStreet/City
        </p>
     </div>
 </template>
@@ -20,5 +21,6 @@
     text-transform: lowercase;
     height: 500px;
     width: 800px;
+    text-align: left;
  }
 </style>

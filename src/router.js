@@ -5,7 +5,7 @@ import Login from '@/components/login.vue'
 import Signup from '@/components/signup.vue'
 import Contact from '@/components/contact.vue'
 import Home from '@/components/home.vue'
-import Catalog from '@/components/catalog.vue'
+import Catalog from '@/components/catalog/catalog.vue'
 import Servicing from '@/components/servicing.vue'
 
 const routes = [

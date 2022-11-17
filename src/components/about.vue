@@ -1,6 +1,7 @@
 <template>
     <div class="container-about">
        <p>
+       About our shop <br>
        A study referenced in the popular magazine Psychology 
        Today concluded that it takes an average of 66 days for a behavior to become automatic. 
        If that’s true, that’s good news for business leaders who have spent the past five months running 
@@ -29,5 +30,6 @@
     border-top: 1px solid black;
     text-transform: lowercase;
     height: 500px;
+    text-align: left;
 }
 </style>
