@@ -9,7 +9,7 @@
         </div>
 
         <div>
-            {{ comp.price }}
+            price {{ comp.price }} <br>
             <button @click="onAdd"> add to bucket </button>
         </div>
     </div>
@@ -34,5 +34,13 @@
 </script>
 
 <style scoped>
-
+.cart-container {
+    width: 250px;
+    height: 200px;
+    float: left;
+}
+.cart-container img{
+   width: 150px;
+   height: 100px;
+}
 </style>

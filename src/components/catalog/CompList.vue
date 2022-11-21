@@ -26,5 +26,6 @@ import { mapGetters } from "vuex";
     width: 800px;
     height: 400px;
     text-align: left;
+    margin-left: 55px;
   }
 </style>
