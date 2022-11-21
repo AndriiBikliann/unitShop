@@ -9,17 +9,17 @@
         </ul>
 
         <div v-if="comp">
-           <computers/>
+           <comp-list/>
         </div>
     </div>
 </template>
 
 <script>
-import Computers from './computers.vue'
+import CompList from './CompList.vue'
     export default {
         name:'Catalog-page',
         components: {
-            Computers
+            CompList
         },
         data() {
             return {
