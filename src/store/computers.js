@@ -39,10 +39,52 @@ export default {
               title:'Personal computer 6',
               price:'66',
             },
+          ],
+          compBucket: [
+            {
+              id:'thsgfbd345',
+              compId:'2',
+              count: 2
+            },
+            {
+              id:'fdhkbfmnk14',
+              compId:'3',
+              count: 3
+            },
+            {
+              id:'thacnrd345',
+              compId:'4',
+              count: 4
+            }
           ]
     }),
  
     getters: {
-      getCompList: state => state.compList
+      getCompList: state => state.compList,
+      getCompBucket: state => state.compBucket,
+      getCompById: state => (compId) => state.compList.find(item => item.id === compId),
+    },
+
+    mutations: {
+      addComp(state, compId) {
+        const comp = state.compBucket.find(item => item.compId === compId)
+        if(comp)
+        comp.count++
+        else
+        state.compBucket.push(
+          {
+            id: new Date().getTime(),
+            compId,
+            count: 1
+          }
+        )
+      }
+    },
+
+    actions: {
+      addComp({commit}, compId) {
+        commit('addComp', compId)
+      }
     }
+
 }

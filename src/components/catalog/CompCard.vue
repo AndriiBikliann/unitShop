@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
     export default {
         name:'CompCard',
         props: {
@@ -25,7 +26,7 @@
             }
         },
         methods: {
-            //...mapActions(['addPizza']),
+            ...mapActions('computers', ['addComp']),
             onAdd() {
                 this.addComp(this.comp.id)
             }
