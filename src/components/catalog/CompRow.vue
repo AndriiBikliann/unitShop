@@ -39,7 +39,8 @@ import { mapGetters, /*mapActions*/ } from 'vuex'
 
 <style scoped>
 .comp-row-container {
-   display: flex
+   display: flex;
+   margin: 20px 0px 20px 40px;
 }
 img {
    width: 30px;

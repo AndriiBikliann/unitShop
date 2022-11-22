@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="home-container">
+       <h4> Your products for order </h4>
        <comp-bucket/>
     </div>
 </template>
@@ -15,5 +16,10 @@ import CompBucket from '../components/catalog/CompBucket.vue'
 </script>
 
 <style scoped>
-
+.home-container {
+    float: left;
+    border-top: 1px solid black;
+    height: 500px;
+    text-align: left;
+}
 </style>

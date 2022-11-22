@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="comp-bucket-container">
       <comp-row v-for="item in getCompBucket" :key="item.id" :compItem="item"/>
     </div>
 </template>
@@ -19,5 +19,9 @@ import CompRow from '../catalog/CompRow.vue'
 </script>
 
 <style scoped>
-
+.comp-bucket-container {
+    float: left;
+    width: 800px;
+    min-height: 500px;
+}
 </style>
