@@ -74,7 +74,7 @@ export default {
         state.compBucket.push(
           {
             id: new Date().getTime(),
-            compId,
+            compId: compId,
             count: 1
           }
         )
