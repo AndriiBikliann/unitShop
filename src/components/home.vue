@@ -22,4 +22,7 @@ import CompBucket from '../components/catalog/CompBucket.vue'
     height: 500px;
     text-align: left;
 }
+h4 {
+    padding: 20px 40px;
+}
 </style>

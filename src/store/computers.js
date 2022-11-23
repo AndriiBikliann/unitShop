@@ -66,6 +66,18 @@ export default {
     },
 
     mutations: {
+      compIncrement(state, compItemId){
+        const item = state.compBucket.find( item => item.id === compItemId )
+        item.count += 1;
+       },
+       compDecrement(state, compItemId){
+        const item = state.compBucket.find( item => item.id === compItemId )
+        if (item.count > 1) item.count -= 1;
+       },
+       compDelete(state, compItemId){
+        state.compBucket = state.compBucket.filter(item => item.id !== compItemId)
+       },
+
       addComp(state, compId) {
         const comp = state.compBucket.find(item => item.compId === compId)
         if(comp)
@@ -82,6 +94,21 @@ export default {
     },
 
     actions: {
+
+      compAction({commit}, payload){
+        switch (payload.type){
+          case 'increment':
+              commit('compIncrement', payload.value)
+          break;
+          case 'decrement':
+              commit('compDecrement', payload.value)
+          break;
+          case 'delete':
+              commit('compDelete', payload.value)
+          break;
+        }  
+      },
+
       addComp({commit}, compId) {
         commit('addComp', compId)
       }

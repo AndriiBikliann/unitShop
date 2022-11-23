@@ -9,9 +9,10 @@
       </div>
 
       <div>
+        price 
         {{ comp.price }}
-        <button @click="onDecrement"> take away </button>
-        <button @click="onIncrement"> add next one </button>
+        <button @click="onDecrement"> - </button>
+        <button @click="onIncrement"> + </button>
         <button @click="onDelete"> delete </button>
            <span> {{ compItem.count }} </span>
       </div>
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import { mapGetters, /*mapActions*/ } from 'vuex'
+import { mapActions, mapGetters, /*mapActions*/ } from 'vuex'
     export default {
         name:'CompRow',
         props: {
@@ -33,6 +34,28 @@ import { mapGetters, /*mapActions*/ } from 'vuex'
             comp() {
                 return this.getCompById(this.compItem.compId)
             }
+        },
+        methods: {
+          ...mapActions('computers', ['compAction']),
+
+          onDecrement() {
+             this.compAction({
+                type:'decrement',
+                value: this.compItem.id
+             })
+          },
+          onIncrement() {
+             this.compAction({
+                type:'increment',
+                value: this.compItem.id
+             })
+          },
+          onDelete() {
+             this.compAction({
+                type:'delete',
+                value: this.compItem.id
+             })
+          },
         },
     }
 </script>
