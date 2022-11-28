@@ -7,7 +7,6 @@
             <li> Monitors </li>
             <li>Washing machines </li>
         </ul>
-
         <div v-if="comp">
            <comp-list/>
         </div>

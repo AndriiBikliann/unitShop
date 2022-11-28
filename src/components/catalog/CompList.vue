@@ -1,6 +1,5 @@
 <template>
     <div class="container-comp">
-       <div> Total {{ getTotalPrice }} </div>
        <comp-card v-for="comp in getCompList" :key="comp.id" :comp="comp"/>
     </div>
 </template>

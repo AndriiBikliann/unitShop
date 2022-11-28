@@ -1,6 +1,10 @@
 <template>
     <div class="comp-bucket-container">
       <comp-row v-for="item in getCompBucket" :key="item.id" :compItem="item"/>
+      <div class="total-price"> 
+        Total price {{ getTotalPrice }} <br>
+        Total count {{ getTotalCount }}
+        </div>
     </div>
 </template>
 
@@ -13,7 +17,7 @@ import CompRow from '../catalog/CompRow.vue'
             CompRow
         },
         computed: {
-        ...mapGetters('computers', ['getCompBucket'])
+        ...mapGetters('computers', ['getCompBucket', 'getTotalPrice', 'getTotalCount'])
         }
     }
 </script>
@@ -23,5 +27,9 @@ import CompRow from '../catalog/CompRow.vue'
     float: left;
     width: 800px;
     min-height: 500px;
+}
+.total-price {
+    float: right;
+    margin: 20px 40px;
 }
 </style>
