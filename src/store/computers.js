@@ -67,10 +67,10 @@ export default {
           const comp = state.compList.find(item => item.id === compItem.compId)
           return prevSum + (comp.price * compItem.count)
       }, 0),
-      //getTotalCount: state => state.compBucket.reduce((prevSum, compItem) => {
-      //  const comp = state.compList.find(item => item.id === compItem.compId)
-      //  return prevSum + compItem.count
-    //}, 0)
+      getTotalCount: state => state.compBucket.reduce((prevSum, compItem) => {
+        const comp = state.compList.find(item => item.id === compItem.compId)
+        return prevSum + (comp.price*0 + compItem.count)
+     }, 0)
     },
 
     mutations: {
