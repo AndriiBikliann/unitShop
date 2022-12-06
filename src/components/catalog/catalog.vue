@@ -2,13 +2,16 @@
     <div class="container-catalog">
         <ul>
             <li> <button @click="onClick"> Computers </button> </li>
-            <li>  Phones </li>
+            <li> <button @click="onClickPhone"> Phones </button> </li>
             <li> TV </li>
             <li> Monitors </li>
             <li>Washing machines </li>
         </ul>
         <div v-if="comp">
            <comp-list/>
+        </div>
+        <div v-if="phone">
+            phone-list
         </div>
     </div>
 </template>
@@ -22,12 +25,16 @@ import CompList from './CompList.vue'
         },
         data() {
             return {
-                comp: null
+                comp: null,
+                phone: null
             }
         },
         methods: {
             onClick() {
                 this.comp = true
+            },
+            onClickPhone() {
+                this.phone = true
             }
         },
     }

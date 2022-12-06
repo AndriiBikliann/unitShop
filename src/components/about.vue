@@ -32,4 +32,7 @@
     height: 500px;
     text-align: left;
 }
+.container-about p {
+    padding: 40px;
+}
 </style>

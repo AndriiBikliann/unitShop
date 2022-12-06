@@ -22,5 +22,9 @@
     height: 500px;
     width: 800px;
     text-align: left;
+    
+ }
+ .container-contact p {
+    padding: 40px;
  }
 </style>

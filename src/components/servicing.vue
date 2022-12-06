@@ -27,4 +27,7 @@
     height: 500px;
     text-align: left;
 }
+.container-servicing p {
+    padding: 40px;
+}
 </style>
